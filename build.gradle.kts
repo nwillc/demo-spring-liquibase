@@ -5,6 +5,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.0.7.RELEASE"
 	kotlin("jvm") version "1.3.41"
 	kotlin("plugin.spring") version "1.3.41"
+	id("org.jetbrains.kotlin.plugin.noarg") version "1.3.41"
 }
 
 group = "com.example"
@@ -17,6 +18,7 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-jdbc")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.liquibase:liquibase-core")
@@ -26,6 +28,10 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 
 	testRuntime("com.h2database:h2")
+}
+
+noArg {
+	annotation("javax.persistence.Entity")
 }
 
 tasks.withType<KotlinCompile> {
