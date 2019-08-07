@@ -5,10 +5,10 @@ import kotlin.random.Random
 
 data class Numbers(
     val name: String,
-    val draw1: Int = Random.nextInt(1, LIMIT),
-    val draw2: Int = Random.nextInt(1, LIMIT - draw1 + 1)
+    val pennies1: Int = Random.nextInt(1, PENNIES),
+    val pennies2: Int = Random.nextInt(1, PENNIES - pennies1 + 1)
 ) {
     companion object {
-        const val LIMIT = 50
+        const val PENNIES = 50
     }
 }

@@ -9,7 +9,7 @@ class NumbersTest {
     fun `should be able to create a numbers instance`() {
         for (i in 1 .. 100) {
             val numbers = Numbers("Foo")
-            assertThat(numbers.draw1 + numbers.draw2).isLessThanOrEqualTo(Numbers.LIMIT)
+            assertThat(numbers.pennies1 + numbers.pennies2).isLessThanOrEqualTo(Numbers.PENNIES)
             println(numbers)
         }
     }
