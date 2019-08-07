@@ -1,5 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+val assertjVarsion: String by project
+val jupiterVersion: String by project
+
 plugins {
 	id("org.springframework.boot") version "2.1.6.RELEASE"
 	id("io.spring.dependency-management") version "1.0.7.RELEASE"
@@ -26,6 +29,8 @@ dependencies {
 	runtime("org.postgresql:postgresql:42.2.6")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("org.junit.jupiter:junit-jupiter:$jupiterVersion")
+	testImplementation("org.assertj:assertj-core:$assertjVarsion")
 
 	testRuntime("com.h2database:h2")
 }
