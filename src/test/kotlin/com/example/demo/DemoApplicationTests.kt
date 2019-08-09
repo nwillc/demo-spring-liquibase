@@ -14,7 +14,7 @@ import java.util.UUID
 @SpringBootTest
 class DemoApplicationTests {
 	@Autowired
-	lateinit var perRepository: CustomerRepository
+	lateinit var perRepository: PersonRepository
 
 	@Test
 	fun contextLoads() {
